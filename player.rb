@@ -1,21 +1,14 @@
 class Player
-    attr_accessor :name, :current, :eventCount, :flg
+    attr_accessor :name, :current, :eventCount#, :flg
 
-    # def initialize(name)
-    #     @name = name    
-    #     @current = 0
-    #     @eventCount = 0
-    #     @flg = false
+    def initialize(name)
+        @name = name    
+        @current = 0
+        @eventCount = 0
+        # @flg = false
      
-    # end
+    end
 
-    # def initialize(name)
-    #     @name = name    
-    #     @current = 0
-    #     @eventCount = 0
-    #     @flg = false
-        
-    # end
     
     def playerSelect
         num = rand(1..2)
@@ -47,6 +40,6 @@ class Player
 end
 
 
-player = Player.new
-puts player.playerSelect
+# player = Player.new
+# puts player.playerSelect
 

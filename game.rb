@@ -4,14 +4,11 @@ require "./dice"
 
 
 
+# メソッドが使えるのは同じクラス内（同じオブジェクト内）
+# 同じクラス内ならインスタンスメソッドを共有できる
+# オブジェクト指向はクラス同士のメッセージのやりとり。クラス同士の入り口はメソッドのみ(def,attr_accessor)
+
 class Game
-    
-    def initialize()
-        # p 'aaa'
-        # @squares = CSV.read(file)
-        # @squares = [1,2,3]
-        
-    end
 
     # ボードを用意
     def setBoard(board)
@@ -26,7 +23,6 @@ class Game
     # # プレイヤーを登録 引数のaddPlayerにはPlayer.new()が入る
     def addPlayer(addPlayer)
         @Players = []
-        # @Players << addPlayer
         @player = addPlayer
         @Players << @player
         p @Players
@@ -37,13 +33,14 @@ class Game
     # # サイコロを用意
     def setDice(setDice)
         @dice = setDice
-        
+        #ここで@diceに入っているのはsetDiceに引数として渡されるDice.newによって生成されたオブジェクト。
+        #つまり@diceはDiceクラスのオブジェクトとして使える。
+        #なので@diceからDiceクラスに定義されているメソッドが呼び出せる
     end
 
 
-    dice = Dice.new
-
-    dice.roll == @dice.roll
+    # dice = Dice.new
+    # dice.roll == @dice.roll
 
 
 
@@ -53,14 +50,18 @@ class Game
         # p board
         p @board
         # setCurrent = @dice.roll + @players.getCurrent
-
-
         # @dice.メソッド
 
         # p @players
-     
-        # rand(1..6
+
+        puts @Players.playerSelect
         
+        i = 0 
+        while i  
+
+
+
+
     end
 
     
