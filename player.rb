@@ -40,7 +40,7 @@ class Player
 
     
 
-    def setCurrent
+    def getCurrent
         return @current
     end
 

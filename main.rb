@@ -25,10 +25,12 @@ game = Game.new
 
 # game.start
 
-
-game.setBoard(Board.new())
+# 
+# game.setBoard(Board.new())
 # board.print
 # p board.squares
+
+game.setBoard(Board.new(“board.csv”))
 
 game.addPlayer(Player.new("Taro"))
 game.addPlayer(Player.new("Jiro"))

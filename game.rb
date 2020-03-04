@@ -17,7 +17,9 @@ class Game
     def setBoard(board)
         # p board
         @board = board
+        p @board.getSquares()
     end
+
 
 
     
@@ -35,10 +37,13 @@ class Game
     # # サイコロを用意
     def setDice(setDice)
         @dice = setDice
-        # @mydiceNum = @diceNum
+        
     end
 
 
+    dice = Dice.new
+
+    dice.roll == @dice.roll
 
 
 
@@ -47,10 +52,14 @@ class Game
     def start
         # p board
         p @board
-        p @dice 
-        p @players
+        # setCurrent = @dice.roll + @players.getCurrent
+
+
+        # @dice.メソッド
+
+        # p @players
      
-        rand(1..6
+        # rand(1..6
         
     end
 
